@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->decimal('price',10,0);
+            $table->string('image');
             $table->enum('menu_type', ['set', 'combo', 'goi_mon'])->default('goi_mon');
             $table->unsignedBigInteger('category_id');
             $table->foreign('category_id')->references('id')->on('categories');
